@@ -23,7 +23,7 @@ body {
 }
 
 body {
-  background-image: url(../img/dash-bg-01.jpg);
+  background-image: url(../img/dash-bg-01.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -33,7 +33,7 @@ body {
 }
 
 .bg02 {
-	background-image: url(../img/dash-bg-02.jpg);
+	background-image: url(../img/dash-bg-02.jpeg);
 }
 
 .bg03 {
@@ -549,4 +549,8 @@ footer {
 }
 .tm-spa-icon{
   color:green;
+}
+.header-chart{
+  display: flex;
+  justify-content: space-between;
 }
