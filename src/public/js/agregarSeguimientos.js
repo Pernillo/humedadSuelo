@@ -8,7 +8,7 @@ $("#target").submit(function (event) {
     fecha: fecha.value,
   };
 
-  fetch(`http://localhost:3000/seguimientos`, {
+  fetch(`http://127.0.0.1:3000/seguimientos`, {
     method: "POST",
     headers: {
       Accept: "application/json",

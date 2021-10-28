@@ -1,5 +1,5 @@
 /* LLamar al listado de seguimientos */
-fetch("http://localhost:3000/seguimientos")
+fetch("http://127.0.0.1:3000/seguimientos")
   .then((response) => response.json())
   .then((data) => listarSeguimientos(data));
 
@@ -27,7 +27,7 @@ const listarSeguimientos = (data) => {
 
 /* Elimina el seguimiento por su id */
 const eliminarSeguimiento = (idSeguimiento) => {
-  fetch(`http://localhost:3000/seguimientos/${idSeguimiento}`, {
+  fetch(`http://127.0.0.1:3000/seguimientos/${idSeguimiento}`, {
     method: "DELETE",
   })
     .then((response) => response.json())
