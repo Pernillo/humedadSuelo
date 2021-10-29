@@ -1,5 +1,5 @@
 /* LLamar al listado de seguimientos */
-fetch("http://127.0.0.1:3000/historial")
+fetch("http://192.168.1.116:3000/historial")
   .then((response) => response.json())
   .then((data) => listarHistorial(data));
 
@@ -25,7 +25,7 @@ const listarHistorial = (data) => {
 
 /* Elimina el seguimiento por su id */
 const eliminarSeguimiento = (idSeguimiento) => {
-  fetch(`http://127.0.0.1:3000/seguimientos/${idSeguimiento}`, {
+  fetch(`http://192.168.1.116:3000/seguimientos/${idSeguimiento}`, {
       method: "DELETE",
     })
     .then((response) => response.json())

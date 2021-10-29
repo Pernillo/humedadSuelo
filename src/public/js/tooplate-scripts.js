@@ -6,7 +6,7 @@ const guardarHistorialRiego = () => {
     // fecha: new Date()
     fecha: moment().format('MMM. D, YYYY [a las] h:mm A z')
   };
-  fetch(`http://127.0.0.1:3000/historial`, {
+  fetch(`http://192.168.1.116:3000/historial`, {
       method: "POST",
       headers: {
         Accept: "application/json",
