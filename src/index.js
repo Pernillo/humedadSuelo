@@ -6,6 +6,7 @@ const path = require("path");
 const { createSocket } = require("./libs/socket"); //crear socket.io
 const { parser } = require("./libs/serialPort"); //lectura de puerto serial
 const seguimientos = require("./seguimientos/seguimientos");
+const historialRiego = require("./historialRiego/historialRiego");
 
 //configuramos para que el path inicial sea dentro de publico
 let initial_path = path.join(__dirname, "public");
@@ -37,6 +38,21 @@ app.post("/seguimientos",  (req, res) => {
 app.delete("/seguimientos/:id", async (req, res) => {
   const id = req.params.id;
   res.json(seguimientos.deleteSeguimiento(id));
+});
+
+//Historial del riego
+app.get("/historial", (req, res) => {
+  res.json(historialRiego.getHistorialRiego());
+});
+
+app.post("/historial",  (req, res) => {
+  const historial = req.body
+  res.json(historialRiego.postHistorialRiego(historial));
+});
+
+app.delete("/historial/:id", async (req, res) => {
+  const id = req.params.id;
+  res.json(historialRiego.deleteSeguimiento(id));
 });
 
 //lectura de puerto serial en arduino
